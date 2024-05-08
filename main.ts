@@ -26,7 +26,7 @@ auto1.setPosition(120, 40)
 let cookie: Sprite = sprites.create(projectImages.Cookie, SpriteKind.Cookie)
 let pointer: Sprite = sprites.create(projectImages.Pointer, SpriteKind.Player)
 pointer.changeScale(0.00000000000000000000000001, ScaleAnchor.Middle)
-cookie.changeScale(1,ScaleAnchor.Middle)
+cookie.changeScale(1, ScaleAnchor.Middle)
 pointer.setStayInScreen(true)
 controller.moveSprite(pointer)
 info.showScore(true)
@@ -46,7 +46,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
             info.setScore(count)
         }
         else {
-            man1.sayText("Cost:"+Math.round(man1Cost),1000)
+            man1.sayText("Cost:" + Math.round(man1Cost), 1000)
         }
     }
     else if (pointer.overlapsWith(auto1)) {
