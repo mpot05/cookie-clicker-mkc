@@ -1,7 +1,3 @@
-let count = 0
-if (configStorage.getItem("cookies") != null) {
-    count = parseInt(configStorage.getItem("cookies"))
-}
 namespace projectImages {
     export const Cookie = assets.image`Cookie`;
     export const Pointer = assets.image`Pointer`;
@@ -17,7 +13,7 @@ namespace SpriteKind {
 }
 scene.setBackgroundColor(9)
 
-
+let count = 0
 let auto = 0
 let clickpower = 1
 let man1Cost = 25
@@ -83,7 +79,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
 })
 
 game.onUpdateInterval(500, () => {
-    configStorage.setItem("cookies", "" + count)
     info.setScore(count)
 })
 
