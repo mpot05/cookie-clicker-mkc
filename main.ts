@@ -1,3 +1,7 @@
+let count = 0
+if (configStorage.getItem("cookies") != null) {
+    count = parseInt(configStorage.getItem("cookies"))
+}
 namespace projectImages {
     export const Cookie = assets.image`Cookie`;
     export const Pointer = assets.image`Pointer`;
@@ -8,20 +12,24 @@ namespace projectImages {
 namespace SpriteKind {
     export const Cookie = SpriteKind.create()
     export const Man1 = SpriteKind.create()
+    export const Man2 = SpriteKind.create()
     export const Auto1 = SpriteKind.create()
 }
 scene.setBackgroundColor(9)
 
-let count = 0
+
 let auto = 0
 let clickpower = 1
 let man1Cost = 25
+let man2Cost = 150
 let auto1Cost = 50
 
 let man1: Sprite = sprites.create(projectImages.Man1.doubled(), SpriteKind.Man1)
 man1.setPosition(40, 40)
 let auto1: Sprite = sprites.create(projectImages.Auto1.doubled(), SpriteKind.Auto1)
 auto1.setPosition(120, 40)
+let man2: Sprite = sprites.create(projectImages.Man1.doubled(), SpriteKind.Man2)
+man2.setPosition(40, 80)
 
 let cookie: Sprite = sprites.create(projectImages.Cookie, SpriteKind.Cookie)
 let pointer: Sprite = sprites.create(projectImages.Pointer, SpriteKind.Player)
@@ -49,6 +57,17 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
             man1.sayText("Cost:" + Math.round(man1Cost), 1000)
         }
     }
+    else if (pointer.overlapsWith(man2)) {
+        if (count >= man2Cost) {
+            count -= man2Cost
+            man2Cost *= 1.25
+            clickpower += 10
+            info.setScore(count)
+        }
+        else {
+            man2.sayText("Cost:" + Math.round(man2Cost), 1000)
+        }
+    }
     else if (pointer.overlapsWith(auto1)) {
         if (count >= auto1Cost) {
             count -= auto1Cost
@@ -64,6 +83,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
 })
 
 game.onUpdateInterval(500, () => {
+    configStorage.setItem("cookies", "" + count)
     info.setScore(count)
 })
 
@@ -71,3 +91,4 @@ game.onUpdateInterval(1000, () => {
     count += auto
     info.setScore(count)
 })
+
