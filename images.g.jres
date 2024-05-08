@@ -1,0 +1,27 @@
+{
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO7u7g4AAADg7u7v7gAAAOD+7u7uAAAA4O7+7u8AAADw7u7u7gAAAODu7u/uAAAA4O7v7u4AAADg7u7u7wAAAADu7u4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Cookie"
+    },
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///////w8A8BERERHxAAAAHxEREQ8AAADwERER8QAAAAAfEfERDwAAAPARDx8PAAAAAB8P8AAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Pointer"
+    },
+    "image3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIgIAAAAAACIiAgAAAAAAIiICAAAAAAAiIgIAAAAAACIiAgAAAAAAIiICAAAAAAAiIgIAAAAAACIiAgAAAAAAIiICAAAAAAAiIgIAAAAAACIiAgAAAAAAIiICAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "man1"
+    },
+    "image4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAd3cHAAAAAAB3dwcAAAAAAHd3BwAAAAAAd3cHAAAAAAB3dwcAAAAAAHd3BwAAAAAAd3cHAAAAAAB3dwcAAAAAAHd3BwAAAAAAd3cHAAAAAAB3dwcAAAAAAHd3BwAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "auto1"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
